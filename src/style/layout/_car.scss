@@ -1,0 +1,36 @@
+.car {
+  @extend %styleNone;
+  @include flex(row-reverse, center, flex-end);
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 5px;
+  top: 0;
+  left: 0;
+  color: black;
+  &__name {
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: $xlarge;
+    line-height: $xlarge;
+    width: max-content;
+    filter: drop-shadow(1rem 0 2rem #179fac);
+    text-shadow: 5px 1px 1px #000000;
+    @media (max-width:700px) {
+      font-size: $large;
+      line-height: $large;
+    }
+  }
+  &__icon {
+    filter: drop-shadow(1px 1px 1px 10px black);
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,25 @@
+.footer {
+  height: $footerH;
+  background-color: black;
+  &__list {
+    @include flex(row, center, space-between);
+    @extend %styleNone;
+    height: 100%;
+  }
+  &__rsschool,
+  &__git {
+    @extend %background;
+    display: block; 
+    background-image: url('../assets/rs.svg');
+    width: 60px;
+    height: 60px;
+  }
+  &__git {
+    background-image: url('../assets/github.png');
+  }
+  &__prod {
+    font-size: $xsmall;
+    line-height: $xsmall;
+    color: darkgray;
+  }
+}

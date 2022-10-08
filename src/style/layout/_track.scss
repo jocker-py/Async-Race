@@ -1,0 +1,60 @@
+.track {
+  color: black;
+  width: 100%;
+  flex-shrink: 0;
+  &__list {
+    @extend %styleNone;
+    @include flex(column, stretch, stretch);
+    gap: 10px;
+    flex-wrap: nowrap;
+    height: $trackListH;
+    color: white;
+  }
+  &__item {
+    min-height: 100px;
+    height: $trackItemH;
+    background-color: rgb(34, 33, 33);
+    background-image: url('../assets/noise.png');
+    position: relative;
+  }
+  &__controls {
+    @extend %styleNone;
+    @include flex($j:flex-start);
+    gap: 10px;
+    margin: 10px;
+  }
+  &__control > button,
+  &__finish {
+    @extend %hover;
+    @extend %background; 
+    width: 30px;
+    height: 30px;
+  }
+
+  &__select {
+    background-image: url('../assets/select.png');
+  }
+  &__remove {
+    background-image: url('../assets/remove.png');
+  }
+  &__start {
+    background-image: url('../assets/start.png');
+  }
+  &__stop {
+    background-image: url('../assets/stop.png');
+  }
+  &__finish {
+    background-image: url('../assets/finish.png');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 150px;
+    z-index: 3;
+    &:hover{
+      transform: scale(1.0);
+      opacity: 1;
+      cursor: auto;
+    }
+  }
+}

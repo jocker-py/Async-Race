@@ -1,0 +1,35 @@
+.create,
+.update {
+  @include flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.create__name,
+.update__name {
+  width: 40%;
+  font-size: $small;
+  line-height: $small;
+}
+.create__color,
+.update__color {
+  width: 15%;
+  border-radius: 10%;
+  background-color: black;
+  @extend %hover;
+  &:disabled:hover {
+    cursor: auto;
+    opacity: 1;
+  }
+}
+.create__btn,
+.update__btn {
+  width: 20%;
+  font-size: $small;
+  line-height: $small;
+  @extend %hover;
+  &:disabled:hover {
+    cursor: auto;
+    opacity: 1;
+  }
+}
