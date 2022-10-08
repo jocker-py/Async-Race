@@ -1,0 +1,20 @@
+$xsmall: 1.0rem;
+$small: 1.6rem;
+$large: 2.4rem;
+$xlarge: 3.6rem;
+$xxlarge: 7.2rem;
+
+$viewH: 100vh;
+$headerH: 130px;
+$factoryH: 150px;
+$garageH: 30px;
+$paginationH: 50px;
+$footerH: 70px;
+
+$mainH: calc($viewH - $footerH - $headerH);
+$raceH: calc($mainH - $factoryH - $paginationH);
+$listH: calc($raceH - $garageH);
+$recordsH: $mainH;
+
+$trackListH: calc($listH);
+$trackItemH: calc(($listH / 7) - 5px);

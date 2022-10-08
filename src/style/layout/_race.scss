@@ -1,0 +1,22 @@
+.race {
+  overflow-x: hidden;
+  background-color: black;
+  &__title {
+    height: $garageH;
+    font-size: $large;
+    line-height: $large;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  &__list {
+    @extend %styleNone;
+    @include flex($j: flex-start);
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 1;
+    transition: all 3s;
+    left: 0%;
+  }
+}

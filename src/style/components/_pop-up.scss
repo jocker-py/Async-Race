@@ -1,0 +1,39 @@
+.pop-up {
+    @include flex(column);
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    font-size: $xlarge;
+    line-height: $xlarge;
+    gap: 20px;
+    transform: translateY(-100%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    @media (max-width: 600px) {
+        font-size: $xsmall;
+        line-height: $xsmall;
+    }
+    &__list {
+        @include flex(column);
+        @extend %styleNone;
+        position: relative;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 30px;
+        background-color: white;
+        top: -10%;
+    }
+    &__item {
+        color: black;
+        span {
+            color: rgb(28, 204, 228);
+            filter: drop-shadow(0.2rem 0 0.2rem #000000);
+        }
+    }
+
+    &.active {
+        transform: translateY(0%);
+    }
+}

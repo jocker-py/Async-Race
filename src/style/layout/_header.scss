@@ -1,0 +1,49 @@
+.header {
+  height: $headerH;
+  background-color: #179fac;
+  &__title{
+    font-size: $xlarge;
+    line-height: $xlarge;
+    color: #FFFFFF;
+    filter: drop-shadow(1rem 0 2rem #000000);
+    text-shadow: 5px 5px 5px #000;
+    @media (max-width:700px) {
+      font-size: $large;
+      line-height: $large;
+    }
+  }
+  .wrapper {
+    @include flex($j: space-between);
+  }
+  .logo {
+    @extend %background;
+    background-image: url('../assets/logo.jpeg');
+    width: 130px;
+    height: 130px;
+    border: 2px solid black;
+    background-size: cover;
+    border-radius: 50%;
+    @media (max-width:700px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .nav {
+    &__list {
+      @include flex;
+      @extend %styleNone;
+    }
+    &__item {
+      @extend %background;
+      @extend %hover;
+      margin: 0 5px;
+      &#winners {
+        background-image: url('../assets/winner.png');
+      }
+      &#garage {
+        @extend %hover;
+        background-image: url('../assets/garages.png');
+      }
+    }
+  }
+}

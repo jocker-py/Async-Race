@@ -1,0 +1,32 @@
+.factory {
+  @include flex(column);
+  margin: 0 auto;
+  gap: 5px;
+  min-width: 300px;
+  max-width: 30%;
+  height: $factoryH;
+  color: black;
+  &__list {
+    @include flex;
+    @extend %styleNone;
+    flex-wrap: nowrap;
+    width: 80%;
+    gap: 30px;
+    font-size: $large;
+    line-height: $large;
+  }
+  &__item > button {
+    @extend %hover;
+    @extend %background;
+  }
+
+  &__race {
+    background-image: url('../assets/race.png');  ;
+  }
+  &__reset {
+    background-image: url('../assets/reset.png');  ;
+  }
+  &__generate {
+    background-image: url('../assets/generate.png');  ;
+  }
+}

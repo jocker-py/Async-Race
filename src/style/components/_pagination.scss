@@ -1,0 +1,39 @@
+.pagination{
+  @include flex;
+  background-color: black;
+  height: $paginationH;
+}
+
+.pagination,
+.records {
+  &__prev,
+  &__next,
+  &__first,
+  &__last,
+  &__page {
+    @extend %hover;
+    @extend %background;
+    margin: 0 10px;
+    height: 100%;
+    width: 50px;
+  }
+  &__first {
+    background-image: url('../assets/first.png');
+  }
+  &__prev{
+    background-image: url('../assets/left.png');
+  }
+  &__next{
+    background-image: url('../assets/right.png');
+  }
+  &__last{
+    background-image: url('../assets/last.png');
+  }
+  
+
+  &__page {
+    color: white;
+    font-size: $large;
+    background-image: url('../assets/page.png');
+  }
+}
